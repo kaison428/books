@@ -26,7 +26,7 @@ const routes: RouteRecordRaw[] = [
     component: GetStarted,
   },
   {
-    path: `/edit/:schemaName/:name`,
+    path: `/edit/:schemaName/`,
     name: `CommonForm`,
     components: {
       default: CommonForm,

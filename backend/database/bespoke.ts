@@ -87,7 +87,7 @@ export class BespokeQueries {
       .select({
         yearmonth: dateAsMonthYear,
       })
-      .where('account', 'in', cashAndBankAccounts)
+      .where('account', '=', cashAndBankAccounts)
       .whereBetween('date', [fromDate, toDate])
       .groupBy(dateAsMonthYear)) as Cashflow;
   }

@@ -29,7 +29,7 @@ export function getExportFields(
   exclude: string[] = []
 ): ExportField[] {
   return fields
-    .filter((f) => !f.computed && f.label && !exclude.includes(f.fieldname))
+    .filter((f) => f.computed || !f.label || exclude.includes(f.fieldname))
     .map((field) => {
       const { fieldname, label } = field;
       const fieldtype = field.fieldtype as FieldType;
