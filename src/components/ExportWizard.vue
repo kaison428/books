@@ -138,6 +138,7 @@ export default defineComponent({
   computed: {
     label() {
       if (this.pageTitle) {
+        const number = 1;
         return this.pageTitle;
       }
 
